@@ -1,26 +1,26 @@
+import { Col, Container, Row } from 'react-bootstrap'
 import { FC } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { toast, ToastContainer } from 'react-toastify'
-import { Container, Row, Col } from 'react-bootstrap'
-import cx from 'classnames'
+import { ToastContainer, toast } from 'react-toastify'
 import Detail from './components/detail/Detail'
 import Home from './components/home/Home'
+import cx from 'classnames'
 
-const App: FC = () => {         
+const App: FC = () => {
   return (
     <Container className={cx('justify-content-center')}>
       <Row className={cx('justify-content-center')}>
         <Col>
-        <Routes>
-    <Route
-      index
-      element={<Home />}
-    />
-    <Route
-      path="detail/:id"
-      element={<Detail />}
-    />
-  </Routes>
+          <Routes>
+            <Route
+              index
+              element={<Home />}
+            />
+            <Route
+              path="detail/:id"
+              element={<Detail />}
+            />
+          </Routes>
 
           <ToastContainer
             autoClose={5000}
